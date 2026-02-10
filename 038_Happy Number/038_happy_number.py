@@ -1,12 +1,5 @@
 class Solution(object):
     def isHappy(self, n):
-        """
-        :type n: int
-        :rtype: bool
-        """
-        
-        st_num = str(n)
-        is_happy = False
         seen = set()
         if n == 1:
             return True
@@ -28,3 +21,4 @@ class Solution(object):
             
             
         
+
