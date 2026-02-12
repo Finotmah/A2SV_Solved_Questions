@@ -16,6 +16,7 @@ class Solution(object):
                 if matrix[r][c] == 0:
                     row_set.add(r)
                     col_set.add(c)
+                    
         for r in range(rows):
             for c in range(cols):
                 if r in row_set or c in col_set:
@@ -24,3 +25,4 @@ class Solution(object):
         return matrix
 
         
+
