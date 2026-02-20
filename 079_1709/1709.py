@@ -20,13 +20,12 @@ def numops():
                     a[j], a[j+1] = a[j+1], a[j]
                     num_Ops += 1
                     resutl.append((1,j+1))
-        
-        for i in range(n):
-            for j in range(n-1-i):
                 if b[j] > b[j+1]:
                     b[j], b[j+1] = b[j+1], b[j]
                     num_Ops += 1
                     resutl.append((2,j+1))
+
+                
         
         print(num_Ops)
         for i in range(len(resutl)):
