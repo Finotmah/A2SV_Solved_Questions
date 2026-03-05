@@ -6,23 +6,28 @@ class Solution(object):
         :rtype: str
         """
         n = len(s)
-        
-        letters = [ord(c) - ord('a') for c in s]
-        diff = [0] * (n + 1)
-        
-        for l, r, direction in shifts:
-            if direction == 1:
-                diff[l] += 1
-                diff[r+1] -= 1
+        letters = []
+
+        for c in s:
+            letters.append(ord(c)-ord('a'))
+
+        prefix_sum = [0] * (n + 1)
+
+        for l, r, d in shifts:
+            if d == 1:
+                prefix_sum[l] += 1
+                prefix_sum[r+1] -= 1
             else:
-                diff[l] -= 1
-                diff[r+1] += 1
-        
-        for i in range(1, n):
-            diff[i] += diff[i-1]
+                prefix_sum[l] -= 1
+                prefix_sum[r+1] += 1
         
         result = []
+
+        for i in range(1,n + 1):
+            prefix_sum[i] += prefix_sum[i-1]
+        
         for i in range(n):
-            letters[i] = (letters[i] + diff[i]) % 26
-            result.append(chr(ord('a') + letters[i]))
+            letters[i] = (letters[i] + prefix_sum[i])%26
+            result.append(chr(ord('a')+ letters[i]))
+        
         return ''.join(result)
