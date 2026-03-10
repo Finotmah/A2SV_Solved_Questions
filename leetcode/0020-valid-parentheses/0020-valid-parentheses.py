@@ -1,19 +1,16 @@
-class Solution(object):
-    def isValid(self, s):
-        """
-        :type s: str
-        :rtype: bool
-        """
+class Solution:
+    def isValid(self, s: str) -> bool:
         stack = []
-        mapping = {')': '(', '}': '{', ']': '['}
+        mymap = {'}':'{',']':'[',')':'('}
 
-        for char in s:
-            if char in mapping:
-                top_element = stack.pop() if stack else '#'
-                if mapping[char] != top_element:
-                    return False
+        for br in s:
+            if br not in mymap:
+                stack.append(br)
             else:
-                stack.append(char)
-
+                if not stack:
+                    return False
+                if stack[-1] != mymap[br]:
+                    return False
+                else:
+                    stack.pop()
         return not stack
-            
