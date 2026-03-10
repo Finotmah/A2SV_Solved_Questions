@@ -1,15 +1,11 @@
-class Solution(object):
-    def removeStars(self, s):
-        """
-        :type s: str
-        :rtype: str
-        """
+class Solution:
+    def removeStars(self, s: str) -> str:
         stack = []
-
-        for char in s:
-            if char == '*':
+        
+        for c in s:
+            if c == '*':
                 stack.pop()
             else:
-                stack.append(char)
-        
-        return "".join(stack)
+                stack.append(c)
+
+        return ''.join(stack)
