@@ -4,6 +4,7 @@
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0075-sort-colors](https://github.com/Finotmah/A2SV_Solved_Questions/tree/main/0075-sort-colors/) | Medium |
 | [2305-fair-distribution-of-cookies](https://github.com/Finotmah/A2SV_Solved_Questions/tree/main/2305-fair-distribution-of-cookies/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
@@ -21,4 +22,12 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [2305-fair-distribution-of-cookies](https://github.com/Finotmah/A2SV_Solved_Questions/tree/main/2305-fair-distribution-of-cookies/) | Medium |
+## Two Pointers
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0075-sort-colors](https://github.com/Finotmah/A2SV_Solved_Questions/tree/main/0075-sort-colors/) | Medium |
+## Sorting
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0075-sort-colors](https://github.com/Finotmah/A2SV_Solved_Questions/tree/main/0075-sort-colors/) | Medium |
 <!---LeetCode Topics End-->
